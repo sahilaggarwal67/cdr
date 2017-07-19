@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Type1Report" pageWidth="842" pageHeight="1190" columnWidth="752" leftMargin="60" rightMargin="30" topMargin="70" bottomMargin="20" isFloatColumnFooter="true" uuid="76515760-184b-4e4b-9c02-dbca722f1e5e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SHIP_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LOGO2" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DETAILS" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="vat" class="java.lang.String">
+		<fieldDescription><![CDATA[vat]]></fieldDescription>
+	</field>
+	<field name="total" class="java.lang.String">
+		<fieldDescription><![CDATA[total]]></fieldDescription>
+	</field>
+	<field name="invoiceSummary" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceSummary]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="amount2" class="java.lang.String">
+		<fieldDescription><![CDATA[amount2]]></fieldDescription>
+	</field>
+	<field name="currency" class="java.lang.String">
+		<fieldDescription><![CDATA[currency]]></fieldDescription>
+	</field>
+	<field name="vesselName" class="java.lang.String">
+		<fieldDescription><![CDATA[vesselName]]></fieldDescription>
+	</field>
+	<field name="quantity" class="java.lang.String">
+		<fieldDescription><![CDATA[quantity]]></fieldDescription>
+	</field>
+	<field name="amount" class="java.lang.String">
+		<fieldDescription><![CDATA[amount]]></fieldDescription>
+	</field>
+	<field name="invoiceDate" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceDate]]></fieldDescription>
+	</field>
+	<field name="invoiceSubtotal" class="java.lang.String">
+		<fieldDescription><![CDATA[invoiceSubtotal]]></fieldDescription>
+	</field>
+	<field name="companyName" class="java.lang.String">
+		<fieldDescription><![CDATA[companyName]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="283" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement x="4" y="3" width="308" height="78" uuid="2304f3a1-a8f9-4a48-97ef-0eaf11659966"/>
+				<imageExpression><![CDATA[$P{LOGO2}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="4" y="81" width="287" height="53" uuid="d1872d95-ad92-434d-b103-93d2dfa46b1f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="DejaVu Sans" size="22" isBold="false"/>
+				</textElement>
+				<text><![CDATA[INVOICE SUMMARY]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="180" width="202" height="18" uuid="cd5219af-2e16-4526-822f-05e56f67a867"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[#04-80 Wcega Tower]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="162" width="201" height="18" uuid="f4a07b4e-def3-4cc2-9061-017dd4961dbd"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[21 Bukit Batok Crescent]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="198" width="202" height="18" uuid="9216e26b-5c46-41c4-ae1b-b5fc100c28e8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Singapore 658065]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="312" y="3" width="73" height="219" backcolor="#CDCDFA" uuid="f5cc087e-60d3-4acd-8d98-3cee77ed18f0"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="404" y="6" width="110" height="18" uuid="0d0c8b4f-cffa-426c-8c80-e52663c70ea3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Invoice Summary:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="31" width="80" height="18" uuid="219784ae-b479-4115-843d-ead322fc8443"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Invoice Date:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="81" width="80" height="18" uuid="1891e380-eade-4966-af48-0b8eb413b11f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Bill To:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="404" y="116" width="80" height="18" uuid="54afc47e-9fc6-45e1-a878-d9b4128a899f"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Address:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="514" y="6" width="168" height="18" uuid="d2b76512-d5cd-4012-adfa-174c019925e7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceSummary}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="514" y="31" width="168" height="18" uuid="d5883219-41ef-4cbf-a297-f37e78f7b7a9"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="514" y="81" width="229" height="18" uuid="1133f864-51f1-405a-986b-7be652d0fdb8"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{companyName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="514" y="116" width="229" height="30" uuid="03127fdc-86ff-44e5-8f51-8bdde5abea48"/>
+				<textElement verticalAlignment="Top">
+					<font fontName="Californian FB" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA["85 Akti Miaouli\n18538 Piraeus Greece"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="0" y="0" width="752" height="3" backcolor="#546184" uuid="d901f2ca-d345-46b6-abb2-364b92fbdfa4"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="222" width="752" height="3" backcolor="#546184" uuid="81d2f364-ad66-496f-8dc5-60db76ef53fa"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="15" splitType="Stretch">
+			<textField>
+				<reportElement mode="Opaque" x="622" y="1" width="129" height="14" backcolor="#CCCCCC" uuid="673eaeaa-745c-4a9f-974c-484e6c3d0384"/>
+				<box rightPadding="2">
+					<topPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Amount2"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="432" y="1" width="95" height="14" backcolor="#CCCCCC" uuid="5de6328f-8ba1-4114-ba15-6fee8c5dbdf9"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Amount"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="172" y="1" width="184" height="14" backcolor="#CCCCCC" uuid="e3447a81-d9fc-4a73-a6e5-d865e429fd11"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Description"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="356" y="1" width="76" height="14" backcolor="#CCCCCC" uuid="53e49be3-3956-44f2-8369-745de47b32fc"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["QTY"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="1" y="1" width="170" height="14" backcolor="#CCCCCC" uuid="db53aa87-e0c7-48b7-978d-b8588b0a57a9"/>
+				<box leftPadding="2">
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Vessel"]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Opaque" x="527" y="1" width="95" height="14" backcolor="#CCCCCC" uuid="2821f360-c1c2-4537-8afe-7e87a53fd528"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement verticalAlignment="Middle">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Curr"]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="14" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="622" y="0" width="129" height="14" backcolor="#CCCCFF" uuid="09de5844-6c3e-4d45-a958-2f9190b1fb7f"/>
+				<box rightPadding="2">
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Right" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount2}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="356" y="0" width="76" height="14" backcolor="#CCCCFF" uuid="1db3c930-94f5-4124-87b3-ca6a9ae82178"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{quantity}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="432" y="0" width="95" height="14" backcolor="#CCCCFF" uuid="ff913048-29d9-49a7-8575-e67e6aa9c35f"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="1" y="0" width="170" height="14" backcolor="#CCCCFF" uuid="765662cc-67ae-415b-9772-bb7602d01cc8"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="0.25"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{vesselName}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="172" y="0" width="184" height="14" backcolor="#CCCCFF" uuid="0a2aac5b-233f-4f9b-8693-f321a4c623bf"/>
+				<box leftPadding="2">
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement mode="Opaque" x="527" y="0" width="95" height="14" backcolor="#CCCCFF" uuid="3c41e2b5-1029-4306-a96c-cda36c1f6b59"/>
+				<box>
+					<bottomPen lineWidth="0.25"/>
+				</box>
+				<textElement verticalAlignment="Middle"/>
+				<textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="380" splitType="Stretch">
+			<staticText>
+				<reportElement x="11" y="247" width="311" height="18" uuid="c111c811-9414-4dfb-ab35-fe760d4f8d83"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Beneficiary: Robeko Marine Services Pte.Ltd.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="39" width="750" height="3" backcolor="#546184" uuid="9ac11dfb-2312-458a-9d83-7450410f2895"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="164" width="312" height="18" uuid="51aaf16e-afee-4340-a67e-7a54a6408ae5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[United Overseas Bank Limited Singapore ( UOB )]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="291" y="331" width="172" height="18" uuid="99dcdbf9-29f0-43fa-9e25-b2bd297d8e5f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Thank you for your business!]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="227" width="312" height="18" uuid="56ef15d7-f3b4-409c-801c-f5f725afd017"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Swift: UOVBSGSG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="172" y="3" width="309" height="18" uuid="63e17ead-bdba-4f4f-aba1-6f24f4af4c15"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Invoice Subtotal]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="1" y="0" width="750" height="3" backcolor="#546184" uuid="1e804023-fc44-4c0a-9043-13c73cdb854d"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="172" y="46" width="309" height="18" uuid="d07d37a3-7f3b-4535-b0cc-b1ee13ca8c11"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="526" y="3" width="223" height="18" uuid="a93a47d2-0881-446d-8622-39fd38f9b603"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{invoiceSubtotal}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="1" y="69" width="750" height="3" backcolor="#546184" uuid="f5f46840-043f-49ce-b81b-99de9733882d"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="10" y="143" width="312" height="18" uuid="a9204e82-e4ab-4fec-aa95-6f44279faab2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="SansSerif" size="12" isBold="false" isItalic="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+				</textElement>
+				<text><![CDATA[Bank Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="10" y="206" width="312" height="18" uuid="2ae8d79f-f12f-4534-b701-9988fad74658"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Account no.: 372-902-682-2]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="484" y="3" width="3" height="66" backcolor="#546184" uuid="93fa4ce5-a11f-479e-809d-317dfdfc95a0"/>
+				<graphicElement>
+					<pen lineWidth="0.0"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="172" y="21" width="309" height="18" uuid="a486a41a-e42f-4a42-85a0-f5bac9c5fd3a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[VAT]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="12" y="281" width="201" height="18" uuid="8c3816bd-b17a-4685-8264-56d48554be1e"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Payment Terms: 30 days]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="526" y="21" width="223" height="18" uuid="a3085524-abce-4140-9a17-f36dfed2267e"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{vat}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="622" y="46" width="127" height="18" uuid="30b29963-0d89-4c64-aa7f-296c3ef0a02a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle" markup="none">
+					<font fontName="Californian FB" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="12" y="299" width="201" height="18" uuid="5952397d-9d76-4b8d-bdec-6dd4a47f8a24"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[All charges to be paid by client.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="11" y="185" width="311" height="18" uuid="8ad9489d-bbe8-40f5-885a-d9c3a8d94ecb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[80 Rafles Place UOB Plaza, Singapore 048624]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="526" y="46" width="39" height="18" uuid="54afc83b-4ee3-40a2-845d-e7130fee0ff6"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[USD]]></text>
+			</staticText>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Type1Report" pageWidth="595" pageHeight="842" columnWidth="515" leftMargin="40" rightMargin="40" topMargin="20" bottomMargin="20" uuid="76515760-184b-4e4b-9c02-dbca722f1e5e">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SHIP_NAME" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<parameter name="DETAILS" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="monthlyFee" class="java.lang.String">
+		<fieldDescription><![CDATA[monthlyFee]]></fieldDescription>
+	</field>
+	<field name="overallTotal" class="java.lang.String">
+		<fieldDescription><![CDATA[overallTotal]]></fieldDescription>
+	</field>
+	<field name="manualEntry" class="java.util.Map">
+		<fieldDescription><![CDATA[manualEntry]]></fieldDescription>
+	</field>
+	<field name="staticIpFee" class="java.lang.String">
+		<fieldDescription><![CDATA[staticIpFee]]></fieldDescription>
+	</field>
+	<field name="monthName" class="java.lang.String">
+		<fieldDescription><![CDATA[monthName]]></fieldDescription>
+	</field>
+	<field name="reportName" class="java.lang.String">
+		<fieldDescription><![CDATA[reportName]]></fieldDescription>
+	</field>
+	<field name="createdBy" class="java.lang.String">
+		<fieldDescription><![CDATA[createdBy]]></fieldDescription>
+	</field>
+	<field name="manualEntryName" class="java.util.Map">
+		<fieldDescription><![CDATA[manualEntryName]]></fieldDescription>
+	</field>
+	<field name="year" class="java.lang.String">
+		<fieldDescription><![CDATA[year]]></fieldDescription>
+	</field>
+	<field name="rebate1" class="java.lang.String">
+		<fieldDescription><![CDATA[rebate1]]></fieldDescription>
+	</field>
+	<field name="businessLineCalls" class="java.lang.String">
+		<fieldDescription><![CDATA[businessLineCalls]]></fieldDescription>
+	</field>
+	<field name="rebate2" class="java.lang.String">
+		<fieldDescription><![CDATA[rebate2]]></fieldDescription>
+	</field>
+	<field name="rebate" class="java.lang.String">
+		<fieldDescription><![CDATA[rebate]]></fieldDescription>
+	</field>
+	<field name="totalData" class="java.lang.String">
+		<fieldDescription><![CDATA[totalData]]></fieldDescription>
+	</field>
+	<variable name="1" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("1")]]></initialValueExpression>
+	</variable>
+	<variable name="2" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("2")]]></initialValueExpression>
+	</variable>
+	<variable name="3" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("3")]]></initialValueExpression>
+	</variable>
+	<variable name="4" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("4")]]></initialValueExpression>
+	</variable>
+	<variable name="5" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("5")]]></initialValueExpression>
+	</variable>
+	<variable name="6" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("6")]]></initialValueExpression>
+	</variable>
+	<variable name="7" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("7")]]></initialValueExpression>
+	</variable>
+	<variable name="8" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("8")]]></initialValueExpression>
+	</variable>
+	<variable name="9" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("9")]]></initialValueExpression>
+	</variable>
+	<variable name="10" class="java.lang.Integer">
+		<initialValueExpression><![CDATA[new Integer("10")]]></initialValueExpression>
+	</variable>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<image scaleImage="RetainShape">
+				<reportElement x="385" y="12" width="130" height="34" uuid="4e2d519a-97c0-4da1-a9d0-57dbc60a6b02"/>
+				<imageExpression><![CDATA[$P{DETAILS}]]></imageExpression>
+			</image>
+			<image scaleImage="RealSize">
+				<reportElement x="1" y="0" width="99" height="60" uuid="2304f3a1-a8f9-4a48-97ef-0eaf11659966"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band splitType="Stretch"/>
+	</columnHeader>
+	<detail>
+		<band height="718" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="127" height="18" uuid="b762ef94-d20f-4769-afa9-f7890c1bfeb0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[INVOICE DETAILS:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="206" y="0" width="107" height="18" uuid="44210677-4bd5-4667-b781-c33acabc6b16"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SHIP_NAME}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="437" y="0" width="78" height="18" uuid="2053d98c-30c3-4262-b838-09d186236ef6"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monthName}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="0" width="56" height="18" uuid="e3c5ae90-ba21-4db8-a0bb-100a03ef3f74"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[MONTH:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="437" y="18" width="78" height="18" uuid="af949e3a-42d9-46e1-9133-de9872e0fee7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{year}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="381" y="18" width="56" height="18" uuid="09997dfd-37a7-4c1e-85a2-ea4729d9e217"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[YEAR:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="381" y="36" width="107" height="18" uuid="a27e2d2a-2376-4c9b-b1c6-ef3bb7609578"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Californian FB" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[US$]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="325" y="36" width="56" height="18" uuid="fd0825fc-4409-4417-af90-3d9063323544"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Currency:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="54" width="92" height="18" uuid="f1dfe6aa-87ee-4ac5-b6ae-9fb1cecb8bbb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[OVERVIEW]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="85" width="79" height="18" uuid="b3574a40-777f-42f9-a18b-c1c6dc51d1c0"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[FBB Package]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="85" width="111" height="18" uuid="53b81664-8ae8-49a1-b821-996d62b7cbd1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Monthly Charge]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="89" y="103" width="114" height="18" uuid="aa8a65a8-6e7f-4cec-98ea-55225c04948d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[ 8Gb Airtime]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="92" y="141" width="111" height="18" uuid="1fa905cd-feeb-44cd-acc9-541bcffa585c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[SeaBrowser System]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="195" width="64" height="18" uuid="df54c61e-2e6a-4f9f-8dde-ea5045f9feb5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Static IP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="195" width="90" height="18" uuid="f7be199a-6e5c-44dd-b9e9-08d4c1c4ca1f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[1 Static IP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="249" width="201" height="18" uuid="e7ce3eca-3717-440f-846b-a1d0727323bc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Business Line Calls]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="295" width="202" height="18" uuid="b51457a3-662f-4ae4-b7b4-ab436de0a554"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Company Rebate from Crew traffic]]></text>
+			</staticText>
+			<line>
+				<reportElement x="0" y="319" width="515" height="1" uuid="1fb23b3e-1bc7-4280-aa9a-a3c065a2d3e8"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="85" width="173" height="18" uuid="9b54d405-fa74-4eaa-9038-394c3abcea3a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{monthlyFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="249" width="173" height="18" uuid="ac9e0598-4687-462b-b168-80f1625a63e2"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{businessLineCalls}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="195" width="173" height="18" uuid="a4952003-83c4-4008-bff6-866751f94556"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{staticIpFee}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="295" width="173" height="18" uuid="18573cd9-4d14-4b59-85ec-618f44855e57"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Calibri" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["-"+$F{rebate}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="128" y="331" width="125" height="18" uuid="edf9eb54-f225-4a19-8466-2556c3cc818d"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total Payable:]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="270" y="331" width="173" height="18" uuid="64de22e3-e1e1-4539-a357-2c1662f66622"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{overallTotal}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="459" y="331" width="39" height="18" uuid="8458f50f-8605-444d-9afd-33217fc3e406"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["US$"]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="1" y="356" width="514" height="1" uuid="ba31b9b8-7c6f-40ca-ac98-e1e721c0c48d"/>
+			</line>
+			<line>
+				<reportElement x="1" y="357" width="514" height="1" uuid="6a8eb16e-37b3-4bd2-833e-7a185c4fa626"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="484" width="312" height="18" uuid="35667b29-9d56-4cd1-9584-645a4975c8e5"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Customer is responsible for ALL bank charges]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="502" width="312" height="18" uuid="1ee92da8-e18e-4362-add1-d6c2cb9c88d7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Payment by Wire Transfer ONLY.]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="0" y="552" width="312" height="18" uuid="1d4034a8-2b6e-4e5d-9a64-392eaff24e00"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Barclays Bank"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="570" width="312" height="18" uuid="a79444da-dc39-4f82-b8d8-5219187bdd1d"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[20 Fulham broadway, Fulham]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="588" width="311" height="18" uuid="dd4f415c-20c5-4105-b035-5b304b1f751c"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[London SW6 1AH United Kingdom]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="606" width="220" height="18" uuid="26247a55-81dc-4c15-ab26-1fee9c5a7506"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GB59BARC20359353252337"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="606" width="92" height="18" uuid="bde00ea6-dffc-4049-beee-1cfd254f0a7f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[IBAN. GBP No.:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="92" y="624" width="220" height="18" uuid="af93dd92-ecd5-46c6-b590-36ca445f1b6a"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["GB59BARC20359354931922"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="624" width="92" height="18" uuid="c84bd74c-fe21-4ab3-ac60-c203164b97fc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[IBAN. USD No.:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="642" width="92" height="18" uuid="7ab1730c-dfd3-490f-8b6f-f8cc8623b63a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Swift:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="642" width="219" height="18" uuid="3f626787-b2ee-436b-b2c6-06bc8a94d93b"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["BARCGB22"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="660" width="92" height="18" uuid="c876be41-7158-44c2-b8f9-3658b35a75a1"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Beneficiary:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="93" y="660" width="219" height="18" uuid="ae8c3d20-6ab6-448a-a7aa-03faae86053f"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font fontName="Arial" size="12" isBold="true" isItalic="true" pdfFontName="Helvetica-BoldOblique" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Yango Satellite Communications Ltd"]]></textFieldExpression>
+			</textField>
+			<break>
+				<reportElement x="0" y="717" width="100" height="1" uuid="fcc23d6f-0d91-4601-abf2-451c2a17af1c"/>
+			</break>
+			<staticText>
+				<reportElement x="92" y="123" width="111" height="18" uuid="b13c04b0-c8fd-4a7b-94e4-fba9d67b3583"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[GTMail+]]></text>
+			</staticText>
+		</band>
+		<band height="718">
+			<line>
+				<reportElement x="0" y="96" width="514" height="1" uuid="24cdc766-bdc7-45c4-8b1e-0f0d7e9f6b01"/>
+			</line>
+			<line>
+				<reportElement x="0" y="97" width="514" height="1" uuid="d403dca7-6117-4f35-b30b-595e182c0f3a"/>
+			</line>
+			<staticText>
+				<reportElement x="1" y="68" width="202" height="18" uuid="053622b4-ee13-4c62-a4e2-1be7ac31bfa7"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Data Use Details]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="1" y="120" width="147" height="18" uuid="b5622f59-545d-4266-95c1-9ae3556b8aa4"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Crew Data Mb]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="148" y="120" width="122" height="18" uuid="0ca48fbe-2eae-4b38-a8c9-a09511680e03"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(11)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="190" width="148" height="18" uuid="590b702e-c95f-459b-af9a-1ae1a5b43486"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Other Data Use Mb]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="148" y="190" width="122" height="18" uuid="74f6ace8-ce39-4c15-baf5-b8ab5ff8464f"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(14)]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="211" width="514" height="1" uuid="4c6e0e6f-6bc2-4991-972e-57e00fd00799"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="234" y="219" width="91" height="18" uuid="c6cd17fe-454b-4143-bf00-39818e21e91a"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalData}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="219" width="148" height="18" uuid="60911bac-ec8f-4f0e-877d-60455ec91933"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total data Used]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="234" y="309" width="91" height="18" uuid="46742023-8241-49f5-a705-cf322278bfb8"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(15)]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="234" y="277" width="91" height="18" uuid="9123b42c-2aeb-4ab5-a2f8-e6c703b8ee85"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(15)]]></textFieldExpression>
+			</textField>
+			<line>
+				<reportElement x="0" y="301" width="514" height="1" uuid="52c6a2c9-f7af-4a7b-a504-166126b17b8d"/>
+			</line>
+			<staticText>
+				<reportElement x="0" y="309" width="148" height="18" uuid="2fbb2dea-f790-47c4-ae94-4fc1820b8ed3"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Total VoIP]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="277" width="148" height="18" uuid="cb8bb9d0-9646-41d6-92e7-7cacf11d8f98"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Crew Voip Minutes]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="123" width="69" height="18" uuid="7778060c-57f8-4d66-8a02-11e3f59e6ef7"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rebate1}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="346" y="123" width="55" height="18" uuid="badb7dee-e9ce-490c-89d7-bc66efe4b904"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rebate]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="346" y="277" width="55" height="18" uuid="6b391fe2-b148-47d7-9ab0-fa4ece23b10a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Rebate]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="401" y="277" width="69" height="18" uuid="3c514018-ccfb-4a97-bdd0-b427ade95829"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{rebate2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="21" width="514" height="41" uuid="1d0323a8-8dac-40a8-b326-bc9763a8481d"/>
+				<textFieldExpression><![CDATA[""]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="148" y="142" width="122" height="18" uuid="ffa2a349-af56-415c-82fc-fc4efd056a39"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(12)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="142" width="148" height="18" uuid="30cd4d89-08f0-4ec9-907e-0bb15a9317dc"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[VoIP Data Use Mb]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="148" y="166" width="122" height="18" uuid="98847b9e-203c-499d-bec5-8f7e0d5b3e77"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{manualEntry}.get(13)]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="166" width="148" height="18" uuid="44c1795d-c671-40e5-9b5d-196c6b2ee889"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Business Data Mb]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+
+	<!-- Base Definition -->
+	<definition name="base-definition" template="/pages/defaultLayout.jsp">
+		<put-attribute name="title" value="" />
+		<!-- <put-attribute name="header" value="/WEB-INF/views/tiles/template/defaultHeader.jsp" 
+			/> -->
+		<put-attribute name="menu" value="/pages/defaultMenu.jsp" />
+		<put-attribute name="body" value="" />
+		<!-- <put-attribute name="footer" value="/WEB-INF/views/tiles/template/defaultFooter.jsp" 
+			/> -->
+	</definition>
+
+
+	<!-- Home Page -->
+	<definition name="type1" extends="base-definition">
+		<put-attribute name="title" value="Type1" />
+		<put-attribute name="body" value="/pages/type1.jsp" />
+	</definition>
+	<definition name="type1process" extends="base-definition">
+		<put-attribute name="title" value="Type1 Process" />
+		<put-attribute name="body" value="/pages/type1process.jsp" />
+	</definition>
+
+	<definition name="type2" extends="base-definition">
+		<put-attribute name="title" value="Type2" />
+		<put-attribute name="body" value="/pages/type2.jsp" />
+	</definition>
+
+	<definition name="type2process" extends="base-definition">
+		<put-attribute name="title" value="Type2 Process" />
+		<put-attribute name="body" value="/pages/type2process.jsp" />
+	</definition>
+
+	<definition name="type2rate" extends="base-definition">
+		<put-attribute name="title" value="Type2 Rate Definition" />
+		<put-attribute name="body" value="/pages/type2rate.jsp" />
+	</definition>
+
+	<definition name="type3" extends="base-definition">
+		<put-attribute name="title" value="Type3" />
+		<put-attribute name="body" value="/pages/type3.jsp" />
+	</definition>
+	
+	<definition name="company" extends="base-definition">
+		<put-attribute name="title" value="Company" />
+		<put-attribute name="body" value="/pages/company.jsp" />
+	</definition>
+
+	<definition name="ship" extends="base-definition">
+		<put-attribute name="title" value="Ship List" />
+		<put-attribute name="body" value="/pages/ship.jsp" />
+	</definition>
+	<definition name="file" extends="base-definition">
+		<put-attribute name="title" value="Uploaded Files" />
+		<put-attribute name="body" value="/pages/file.jsp" />
+	</definition>
+
+	<definition name="shipManualEntries" extends="base-definition">
+		<put-attribute name="title" value="Ship Manual Entries List" />
+		<put-attribute name="body" value="/pages/shipManualEntries.jsp" />
+	</definition>
+
+</tiles-definitions>

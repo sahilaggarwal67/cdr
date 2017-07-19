@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Type1Report_subreport2" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="782" leftMargin="30" rightMargin="30" topMargin="20" bottomMargin="20" uuid="758a4e60-9e6b-4384-8d3d-b341d8cb561f">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SHIP_NAME" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="MONTH" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="YEAR" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="LOGO" class="java.lang.String" isForPrompting="false"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="mobileNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[mobileNumber]]></fieldDescription>
+	</field>
+	<field name="callDate" class="java.lang.String">
+		<fieldDescription><![CDATA[callDate]]></fieldDescription>
+	</field>
+	<field name="duration" class="java.lang.String">
+		<fieldDescription><![CDATA[duration]]></fieldDescription>
+	</field>
+	<field name="callStart" class="java.lang.String">
+		<fieldDescription><![CDATA[callStart]]></fieldDescription>
+	</field>
+	<field name="totalPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[totalPrice]]></fieldDescription>
+	</field>
+	<field name="callType" class="java.lang.String">
+		<fieldDescription><![CDATA[callType]]></fieldDescription>
+	</field>
+	<field name="unitPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[unitPrice]]></fieldDescription>
+	</field>
+	<field name="price2" class="java.lang.String">
+		<fieldDescription><![CDATA[price2]]></fieldDescription>
+	</field>
+	<field name="msisdn" class="java.lang.String">
+		<fieldDescription><![CDATA[msisdn]]></fieldDescription>
+	</field>
+	<field name="bundleIndicator" class="java.lang.String">
+		<fieldDescription><![CDATA[bundleIndicator]]></fieldDescription>
+	</field>
+	<field name="bNumber" class="java.lang.String">
+		<fieldDescription><![CDATA[bNumber]]></fieldDescription>
+	</field>
+	<field name="description" class="java.lang.String">
+		<fieldDescription><![CDATA[description]]></fieldDescription>
+	</field>
+	<field name="price1" class="java.lang.String">
+		<fieldDescription><![CDATA[price1]]></fieldDescription>
+	</field>
+	<field name="otherPartyMsisdn" class="java.lang.String">
+		<fieldDescription><![CDATA[otherPartyMsisdn]]></fieldDescription>
+	</field>
+	<field name="quantityCharged" class="java.lang.String">
+		<fieldDescription><![CDATA[quantityCharged]]></fieldDescription>
+	</field>
+	<field name="imsi" class="java.lang.String">
+		<fieldDescription><![CDATA[imsi]]></fieldDescription>
+	</field>
+	<field name="ispPrice" class="java.lang.String">
+		<fieldDescription><![CDATA[ispPrice]]></fieldDescription>
+	</field>
+	<field name="callTime" class="java.lang.String">
+		<fieldDescription><![CDATA[callTime]]></fieldDescription>
+	</field>
+	<field name="cdrId" class="java.lang.String">
+		<fieldDescription><![CDATA[cdrId]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band splitType="Stretch"/>
+	</title>
+	<pageHeader>
+		<band height="84" splitType="Stretch">
+			<staticText>
+				<reportElement x="369" y="0" width="127" height="23" uuid="be29ab07-fa93-4442-8f86-8f2af04ae04a"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Monospaced" size="14" isBold="false"/>
+				</textElement>
+				<text><![CDATA[INVOICE]]></text>
+			</staticText>
+			<image scaleImage="RealSize">
+				<reportElement x="0" y="0" width="99" height="60" uuid="86fa5b96-7b18-4e3c-a6e7-8f14ac0042dc"/>
+				<imageExpression><![CDATA[$P{LOGO}]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="80" splitType="Stretch">
+			<line>
+				<reportElement x="0" y="32" width="782" height="1" uuid="e60b18c2-5879-43b9-8d56-9230c3c2771d"/>
+				<graphicElement>
+					<pen lineStyle="Double"/>
+				</graphicElement>
+			</line>
+			<line>
+				<reportElement x="0" y="33" width="782" height="1" uuid="8c65bd2e-bd4b-49c6-a787-4835906bef4c"/>
+			</line>
+			<line>
+				<reportElement x="0" y="77" width="782" height="1" uuid="b0f1056a-54a4-4f9d-997f-b22c3d905ced"/>
+			</line>
+			<textField isBlankWhenNull="true">
+				<reportElement x="295" y="10" width="107" height="18" uuid="262c6a8b-137d-4a31-9dba-9e2f87faad68"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{SHIP_NAME}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="0" y="10" width="127" height="18" uuid="d7511df9-5f10-41f3-99d6-afe11ce33ea2"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[CALL DETAILS]]></text>
+			</staticText>
+			<textField isBlankWhenNull="true">
+				<reportElement x="709" y="10" width="65" height="18" uuid="6df49a84-3813-4b6e-809c-1c7aa0ecebce"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{YEAR}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="566" y="10" width="137" height="18" uuid="3945604b-375a-4d48-a2d3-b11e9858b662"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="12" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{MONTH}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="1" y="52" width="163" height="18" uuid="fecab792-b8cc-4724-a24e-dc0a84bf3a17"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Mobile Number(MSISDN)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="164" y="52" width="134" height="18" uuid="61e00f02-8f80-45c8-b567-d491fc52dc46"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Other Party(MSISDN)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="52" width="54" height="18" uuid="0d0fb07a-8cee-49f5-8122-476efc43edfb"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Type]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="352" y="52" width="145" height="18" uuid="f5b3f66c-c148-4ee6-90de-53bb1a939324"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Description]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="52" width="111" height="18" uuid="7986c6a9-4481-4f45-bdaa-250dcecf6f93"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Duration (mm:ss)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="729" y="52" width="53" height="18" uuid="c329d11a-a0ae-4870-b271-657bf98f8367"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="608" y="52" width="63" height="18" uuid="5f182390-e0d3-4038-a4ac-ff78d77998a0"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Date]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="671" y="52" width="58" height="18" uuid="541fbb1b-151e-4795-ac39-90af028abb12"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Arial" size="11" isBold="true" pdfFontName="Helvetica-Bold" isPdfEmbedded="true"/>
+				</textElement>
+				<text><![CDATA[Time]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<textField isBlankWhenNull="true">
+				<reportElement x="1" y="2" width="163" height="16" uuid="cded45f4-4699-483d-941e-6cf421dff9ed"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mobileNumber}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="164" y="2" width="134" height="16" uuid="eb81f5c3-94be-4ca4-b6cf-0c074f31818f"/>
+				<textElement verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{otherPartyMsisdn}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="298" y="2" width="54" height="16" uuid="b66858cc-cb2b-4e14-a883-77a3f6f80464"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{callType}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="352" y="2" width="145" height="16" uuid="559f3436-3873-4a87-8f48-60ec3c1b76f8"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="497" y="2" width="111" height="16" uuid="7e42cd52-d90a-4515-ba1f-6056af1df1da"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{duration}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="729" y="2" width="53" height="16" uuid="9067f0a4-97d5-4a61-a4e8-ebb512254dac"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{totalPrice}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="608" y="2" width="63" height="16" uuid="22fc86a1-3dec-4f40-be17-a4303fca15ba"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{callDate}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement x="671" y="2" width="58" height="16" uuid="f6cb5234-918d-4244-a046-affa7098d8ce"/>
+				<textElement textAlignment="Left" verticalAlignment="Middle">
+					<font fontName="Californian FB" size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{callTime}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
